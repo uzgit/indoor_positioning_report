@@ -1,6 +1,19 @@
 This is a \LaTeX template document.\cite{small}
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{example-image-a}
-\end{figure}
+The DecaWave positioning system in V207 offers a solution for ultrawide band radio-based positioning,
+via round-trip time of arrival distance estimation from a given tag to several anchors whose positions
+are known.
+It provides position estimation in 3 dimensions, but with low precision.
+Initial usage of the system to play the video game Pong revealed difficulty in maintaining a consistent
+position, which is problematic when trying to block the Pong ball from hitting the wall.
+this project attempts to improve the DecaWave system's precision by using
+multiple filtering methods: a Kalman filter, a particle filter, and a heading-aware filter that
+assumes the vehicle whose position is being estimated can only move forward/backward
+and rotate in the yaw dimension,
+and attempts to ignore perceived side-to-side movement.
+The data comes from 3 test cases, wherein a drone with one of the DecaWave tags, an IMU, a depth camera,
+and an optical flow sensor contribute to its positioning accuracy.
+Each of the proposed systems is a dead-reckoning system, meaning that it is subject to drift,
+and therefore depends on the DecaWave system's ``global'' nature to consistently remove the drift.
+The systems are designed purely to augment the DecaWave system, not to serve as a positioning
+system on their own.

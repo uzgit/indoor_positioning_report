@@ -1,5 +1,5 @@
 % Preamble
-\documentclass[11pt]{article}
+\documentclass[conference]{IEEEtran}
 
 % Packages
 \usepackage[top=2.54cm, bottom=2.54cm, right=2.54cm, left=2.54cm]{geometry}
@@ -7,19 +7,21 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{datetime}
-\newdateformat{specialdate}{\twodigit{\THEDAY} \ \monthname[\THEMONTH] \THEYEAR}
-
+\usepackage{amsmath}
 \usepackage[pdfusetitle]{hyperref}
 
-\author{AUTHOR}
-\title{TEMPLATE}
-\date{\specialdate\today}
+\author{Joshua Springer}
+\title{Improving DecaWave's Performance in V207}
+\date{\today}
 
 \begin{document}
     \maketitle
 
     \section{Introduction}
     \input{sections/introduction.tex}
+
+    \section{Methods \& Exploratory Tests}
+    \input{sections/methods.tex}
 
     \bibliography{references}
     \bibliographystyle{plain}
