@@ -10,20 +10,33 @@
 \usepackage{amsmath}
 \usepackage[pdfusetitle]{hyperref}
 
+\usepackage{subcaption}
+
 \author{Joshua Springer}
 \title{Improving DecaWave's Performance in V207}
 \date{\today}
 
 \begin{document}
-    \maketitle
+	\maketitle
 
-    \section{Introduction}
-    \input{sections/introduction.tex}
+	\thispagestyle{plain}
+	\pagestyle{plain}
 
-    \section{Methods \& Exploratory Tests}
-    \input{sections/methods.tex}
+	\section{Introduction}
+	\input{sections/introduction.tex}
 
-    \bibliography{references}
-    \bibliographystyle{plain}
+	\section{Methods \& Exploratory Tests}
+	\input{sections/methods.tex}
 
+	\section{Results}
+	\input{sections/results.tex}
+	
+	\section{Discussion}
+	\input{sections/discussion.tex}
+	
+	\section{Conclusions \& Future Work}
+	\input{sections/conclusions_future_work.tex}
+
+%	\bibliography{references}
+%	\bibliographystyle{plain}
 \end{document}

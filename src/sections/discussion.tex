@@ -1,0 +1,20 @@
+The most tried and true methods -- filtering -- were those that were somewhat successful in this project.
+They slightly decreased the error of the raw DecaWave system,
+although they did add in artifacts such as the purple ``tail'' in Figure~\ref{figure:test3_decawave_and_ground_truth},
+which likely occur as a result of the filter estimate having to converge to the correct value
+after starting at an initial value of $(x,y)=(0,0)$.
+Kalman filtering also predicted near-correct values for the system's heading using dead reckoning
+in test cases 1 and 2, though it had some difficulty in test case 3 for a hitherto undiagnosed reason.
+
+Some peripheral sensors that did not work in this setting could still be applied to future projects.
+While the depth sensor works to accurately estimate the drone's forward velocity in non-antagonistic
+conditions, it has trouble in scenes where there are a lot of obstacles moving close to the camera,
+and when the yaw orientation of the camera changes a lot, because it assumes that each pixel
+labels the same object from frame to frame.
+It could be made smarter in order to fix this issue.
+The optical flow sensor has been shown to work well on surfaces that are less self-similar than the
+floor in V207,
+so this could also be applied to the position estimate if the floor had a more varied visual appearance.
+
+Finally, the heading-aware position estimator was not implementable given time limitations
+and other duties, but this is still a conceptually viable system.
